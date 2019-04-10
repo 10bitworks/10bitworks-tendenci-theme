@@ -1,0 +1,5 @@
+[General]
+name = 10BitWorks
+description = Modified bootswatch 'paper' theme
+version = 1.0
+extends = t7-base

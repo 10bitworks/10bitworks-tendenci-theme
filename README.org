@@ -1,0 +1,2 @@
+* 10BitWorks tendenci theme
+  This is a theme for the tendenci software based off the t7-tendenci theme that is part of the tendenci package and the bootswatch paper theme
