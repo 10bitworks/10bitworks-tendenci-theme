@@ -197,7 +197,7 @@
   <!-- begin: home-fourth-content-row -->
   <section id="recent-events">
     <div class="container">
-      <div class="col-md-6 col-md-offset-3 col-sm-12">
+      <div class="col-md-6 col-sm-12">
 	<h3><a href="/events/">Upcoming Events</a></h3>
           {% list_events as events_list limit=3 %}    
           <ul class="list-group">
@@ -219,11 +219,21 @@
           <a href="{% url 'event.search' %}">{% trans 'View more events' %} »</a>
           {% endif %}      
         </div>
-        
-        <!-- <div class="col-md-3 col-md-offset-1"> -->
-        <!--   {% box 21 %} -->
-        <!-- </div> -->
-      
+      <div class="col-md-3 col-sm-12">
+	{% list_photos as photos_list limit=6 random=true %}
+	{% for photo in photos_list|slice:":3" %}
+	<a href="{{ photo.get_absolute_url }}" class="thumbnail">
+	  <img src="{{ photo.get_small_url }}" alt="{{ photo.caption }}">
+	</a>
+	{% endfor %}
+      </div>
+      <div class="col-md-3 col-sm-12">
+	{% for photo in photos_list|slice:"3:" %}
+	<a href="{{ photo.get_absolute_url }}" class="thumbnail">
+	  <img src="{{ photo.get_small_url }}" alt="{{ photo.caption }}">
+	</a>
+	{% endfor %}
+      </div>
     </div>
   </section>
   <!-- end: home-fourth-content-row -->
