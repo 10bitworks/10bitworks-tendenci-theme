@@ -52,7 +52,8 @@
          <div class="item active">
             {% for story in stories_list %}
             <img class="img-responsive" src="{{ story.photo.url }}" alt="{{ story.title }}" style="object-position:0 1px;">           
-            
+
+	    {% if 'no-caption' not in story.tags %}
            <!-- begin: carousel-caption -->
            <div class="carousel-caption col-md-5 col-md-offset-3">
              <div class="container-fluid">
@@ -64,7 +65,7 @@
              </div>
            </div>
            <!-- end: carousel-caption -->
-            
+           {% endif %}
          </div>
          <!-- end: item active -->
         
