@@ -591,3 +591,8 @@ label.required:after {
 .t-perm-private {
   color: darkgoldenrod;
 }
+
+/* Announcements */
+.announcement-wrap > h4 {
+    margin: 0;
+}
