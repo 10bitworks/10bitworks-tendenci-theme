@@ -1,5 +1,4 @@
 [submodule "bootswatch"]
 	path = bootswatch
-	url = git@github.com:10bitworks/bootswatch.git
-[submodule "bootswatch/"]
 	url = https://github.com/10bitworks/bootswatch.git
+	branch = tenbit
